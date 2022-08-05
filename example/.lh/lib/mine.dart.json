@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/mine.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659690780645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659690780645,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass MinePage extends StatelessWidget {\r\n  const MinePage({Key? key}) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n        body: Center(\r\n      child: Text('braver'),\r\n    ));\r\n  }\r\n}\r\n"
+        }
+    ]
+}
