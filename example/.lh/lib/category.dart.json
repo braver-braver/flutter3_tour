@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1659690704401,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659928364865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n         body: Center(\r\n-      child: Text('braver'),\r\n+      child: Text(\r\n+        'braver',\r\n+        style: Theme.of(context).textTheme.bodyText1,\r\n+      ),\r\n     ));\r\n   }\r\n }\r\n"
                 }
             ],
             "date": 1659690704401,

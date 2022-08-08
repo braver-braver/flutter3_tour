@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1659926799564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659928247894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,25 @@\n     return MaterialApp(\r\n       title: 'App 框架',\r\n       theme: ThemeData(\r\n         primarySwatch: Colors.blue,\r\n+        textTheme: const TextTheme(\r\n+          headline1: TextStyle(\r\n+              fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.white),\r\n+          headline2: TextStyle(\r\n+              fontSize: 32.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+          headline3: TextStyle(\r\n+              fontSize: 28.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+          headline4: TextStyle(\r\n+              fontSize: 24.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+          headline6: TextStyle(\r\n+              fontSize: 14.0, fontWeight: FontWeight.w200, color: Colors.white),\r\n+          bodyText1: TextStyle(\r\n+            fontSize: 20.0,\r\n+            fontWeight: FontWeight.w200,\r\n+          ),\r\n+        ),\r\n+        fontFamily: 'Georgia',\r\n       ),\r\n       home: AppHomePage(),\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1659942254195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,17 @@\n       theme: ThemeData(\r\n         primarySwatch: Colors.blue,\r\n         textTheme: const TextTheme(\r\n           headline1: TextStyle(\r\n-              fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.white),\r\n+              fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.black),\r\n           headline2: TextStyle(\r\n-              fontSize: 32.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+              fontSize: 32.0, fontWeight: FontWeight.w400, color: Colors.black),\r\n           headline3: TextStyle(\r\n-              fontSize: 28.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+              fontSize: 28.0, fontWeight: FontWeight.w400, color: Colors.black),\r\n           headline4: TextStyle(\r\n-              fontSize: 24.0, fontWeight: FontWeight.w400, color: Colors.white),\r\n+              fontSize: 24.0, fontWeight: FontWeight.w400, color: Colors.black),\r\n           headline6: TextStyle(\r\n-              fontSize: 14.0, fontWeight: FontWeight.w200, color: Colors.white),\r\n+              fontSize: 14.0, fontWeight: FontWeight.w200, color: Colors.black),\r\n           bodyText1: TextStyle(\r\n             fontSize: 20.0,\r\n             fontWeight: FontWeight.w200,\r\n           ),\r\n"
+                }
+            ],
+            "date": 1659926799564,
+            "name": "Commit-0",
+            "content": "import 'package:example/app.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nvoid main() {\r\n  runApp(MyApp());\r\n}\r\n\r\nclass MyApp extends StatelessWidget {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      title: 'App 框架',\r\n      theme: ThemeData(\r\n        primarySwatch: Colors.blue,\r\n      ),\r\n      home: AppHomePage(),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

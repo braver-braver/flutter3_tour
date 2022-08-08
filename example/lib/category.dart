@@ -7,7 +7,10 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: Text('braver'),
+      child: Text(
+        'braver',
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
     ));
   }
 }

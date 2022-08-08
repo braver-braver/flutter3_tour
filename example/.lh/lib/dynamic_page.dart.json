@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/dynamic_page.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1659941608523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659942382697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,13 @@\n     _currentPage += 1;\r\n     _requestNewItems();\r\n   }\r\n \r\n+  EasyRefreshController _controller = EasyRefreshController(\r\n+    controlFinishRefresh: true,\r\n+    controlFinishLoad: true,\r\n+  );\r\n+\r\n   void _requestNewItems() async {\r\n     List<Map<String, Object>> _newItems =\r\n         await DynamicMockData.list(_currentPage, PAGE_SIZE);\r\n     setState(() {\r\n@@ -42,8 +47,9 @@\n     return Scaffold(\r\n         body: EasyRefresh(\r\n             onRefresh: _refresh,\r\n             onLoad: _load,\r\n+            controller: _controller,\r\n             child: ListView.builder(\r\n               itemCount: _listItems.length,\r\n               itemBuilder: (_, index) {\r\n                 return DynamicItem(\r\n"
+                }
+            ],
+            "date": 1659941608523,
+            "name": "Commit-0",
+            "content": "import 'package:easy_refresh/easy_refresh.dart';\r\nimport 'package:example/dynamic_item.dart';\r\nimport 'package:example/mock/dynamic_mock_data.dart';\r\nimport 'package:flutter/material.dart';\r\n\r\nclass DynamicPage extends StatefulWidget {\r\n  const DynamicPage({Key? key}) : super(key: key);\r\n\r\n  @override\r\n  State<StatefulWidget> createState() => _DynamicPageState();\r\n}\r\n\r\nclass _DynamicPageState extends State<DynamicPage> {\r\n  List<Map<String, Object>> _listItems = [];\r\n  int _currentPage = 1;\r\n  static const int PAGE_SIZE = 20;\r\n\r\n  void _refresh() async {\r\n    _currentPage = 1;\r\n    _requestNewItems();\r\n  }\r\n\r\n  void _load() async {\r\n    _currentPage += 1;\r\n    _requestNewItems();\r\n  }\r\n\r\n  void _requestNewItems() async {\r\n    List<Map<String, Object>> _newItems =\r\n        await DynamicMockData.list(_currentPage, PAGE_SIZE);\r\n    setState(() {\r\n      if (_currentPage > 1) {\r\n        _listItems += _newItems;\r\n      } else {\r\n        _listItems = _newItems;\r\n      }\r\n    });\r\n  }\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n        body: EasyRefresh(\r\n            onRefresh: _refresh,\r\n            onLoad: _load,\r\n            child: ListView.builder(\r\n              itemCount: _listItems.length,\r\n              itemBuilder: (_, index) {\r\n                return DynamicItem(\r\n                  _listItems[index]['title'] as String,\r\n                  _listItems[index]['imageUrl'] as String,\r\n                  _listItems[index]['viewCount'] as int,\r\n                );\r\n              },\r\n            )));\r\n  }\r\n}\r\n"
+        }
+    ]
+}

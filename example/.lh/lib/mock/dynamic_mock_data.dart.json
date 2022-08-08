@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/mock/dynamic_mock_data.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659929216546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659929216546,
+            "name": "Commit-0",
+            "content": "class DynamicMockData {\r\n  static List<Map<String, Object>> list(int page, int size) {\r\n    return List<Map<String, Object>>.generate(\r\n        size,\r\n        (index) => {\r\n              'title':\r\n                  '标题${index + (page - 1) * size + 1}: 这是一个标题列表，最多两行，多出的部分会被截取',\r\n              'imageUrl':\r\n                  'https://img1.baidu.com/it/u=2930250383,3948884618&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=710',\r\n              'viewCount': 180,\r\n            });\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/dynamic_item.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1659939073810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1659940588095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n import 'package:flutter/material.dart';\r\n \r\n-class Dynamic extends StatelessWidget {\r\n+class DynamicItem extends StatelessWidget {\r\n   final String title;\r\n   final String imageUrl;\r\n   final int viewCount;\r\n   static const double ITEM_HEIGHT = 100;\r\n   static const double TITLE_HEIGHT = 80;\r\n   static const double MARGIN_SIZE = 10;\r\n \r\n-  const Dynamic(this.title, this.imageUrl, this.viewCount, {Key? key})\r\n+  const DynamicItem(this.title, this.imageUrl, this.viewCount, {Key? key})\r\n       : super(key: key);\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n"
+                }
+            ],
+            "date": 1659939073810,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass Dynamic extends StatelessWidget {\r\n  final String title;\r\n  final String imageUrl;\r\n  final int viewCount;\r\n  static const double ITEM_HEIGHT = 100;\r\n  static const double TITLE_HEIGHT = 80;\r\n  static const double MARGIN_SIZE = 10;\r\n\r\n  const Dynamic(this.title, this.imageUrl, this.viewCount, {Key? key})\r\n      : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      margin: EdgeInsets.all(MARGIN_SIZE),\r\n      child: Row(\r\n        crossAxisAlignment: CrossAxisAlignment.start,\r\n        children: [\r\n          _imageWrapper(imageUrl),\r\n          Expanded(\r\n            child: Column(\r\n              crossAxisAlignment: CrossAxisAlignment.start,\r\n              children: [\r\n                _titleWrapper(context, title),\r\n                _viewCountWrapper(viewCount.toString()),\r\n              ],\r\n            ),\r\n          )\r\n        ],\r\n      ),\r\n    );\r\n  }\r\n\r\n  Widget _titleWrapper(BuildContext context, String text) {\r\n    return Container(\r\n        height: TITLE_HEIGHT,\r\n        margin: EdgeInsets.only(left: MARGIN_SIZE),\r\n        child: Text(\r\n          title,\r\n          maxLines: 2,\r\n          overflow: TextOverflow.ellipsis,\r\n          style: Theme.of(context).textTheme.headline6,\r\n        ));\r\n  }\r\n\r\n  Widget _viewCountWrapper(String text) {\r\n    return Container(\r\n        margin: EdgeInsets.only(left: MARGIN_SIZE),\r\n        height: ITEM_HEIGHT - TITLE_HEIGHT,\r\n        child: Row(\r\n          children: [\r\n            Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),\r\n            SizedBox(\r\n              height: 5,\r\n            ),\r\n            Text(viewCount.toString(),\r\n                style: TextStyle(color: Colors.grey, fontSize: 14))\r\n          ],\r\n        ));\r\n  }\r\n\r\n  Widget _imageWrapper(String imageUrl) {\r\n    return SizedBox(\r\n      width: 150,\r\n      height: ITEM_HEIGHT,\r\n      child: Image.network(imageUrl),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
